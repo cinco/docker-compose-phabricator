@@ -19,6 +19,7 @@ RUN apk upgrade -U \
         php7-mbstring \
         php7-mcrypt \
         php7-mysqlnd \
+        php-mysql \
         php7-opcache \
         php7-openssl \
 		php7-pcntl \
