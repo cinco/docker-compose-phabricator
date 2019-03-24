@@ -61,7 +61,8 @@ COPY entrypoint.sh   /
 #Remove useless config
 #Phabricator code, File storage, Code storage and missing PATH folder
 #Redirect the daemon logs
-RUN ln -s /usr/bin/php7 /usr/bin/php \
+RUN rm -rf /usr/bin/php \
+    && ln -s /usr/bin/php7 /usr/bin/php \
     && rm -rf /etc/php7/php-fpm.d \
 	&& mkdir -p /srv \
     && mkdir -p /data \
